@@ -32,6 +32,9 @@ jobs:
           cache-dependency-path: web/package-lock.json
       - uses: actions/configure-pages@v5
         id: pages
+        with:
+          # 首次部署时自动启用 Pages（Source: GitHub Actions）
+          enablement: true
       - run: npm ci
       - run: npm run build # tsc -b && vite build → web/dist
         env:
