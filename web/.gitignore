@@ -1,0 +1,23 @@
+node_modules
+dist
+dist-ssr
+*.tsbuildinfo
+.DS_Store
+*.local
+.env
+.env.*
+!.env.example
+.vite
+.playwright-mcp
+*.log
+
+# 作品媒体：默认随仓库提交，保证 Vercel 能部署。
+# 如果视频/大图体积过大，建议改放到对象存储/CDN，并在此忽略对应目录。
+# public/works/*
+
+# 压缩脚本日志
+scripts/compress-media.log
+
+# 本地工具与部署产物（含本地路径/服务器信息，不入库）
+.claude/
+deploy/

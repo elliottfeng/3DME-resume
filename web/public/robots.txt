@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# 本地占位；构建时由 scripts/set-site-files.mjs 按 VITE_SITE_URL 重新生成
+Sitemap: http://localhost:5173/sitemap.xml
