@@ -32,9 +32,8 @@ jobs:
           cache-dependency-path: web/package-lock.json
       - uses: actions/configure-pages@v5
         id: pages
-        with:
-          # 首次部署时自动启用 Pages（Source: GitHub Actions）
-          enablement: true
+        # 注意：enablement 需要 PAT / GitHub App token，默认 GITHUB_TOKEN 不支持；
+        # Pages 需在仓库 Settings → Pages → Source 选择 "GitHub Actions" 手动启用一次。
       - run: npm ci
       - run: npm run build # tsc -b && vite build → web/dist
         env:
